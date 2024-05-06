@@ -7,7 +7,10 @@ const protectedRoutes = createRouteMatcher([
     '/personal-room',
     '/meeting(.*)'
 ])
-export default clerkMiddleware();
+export default clerkMiddleware((auth,req)=>{
+    if(protectedRoutes(req)) auth().protect();
+
+})
 
 export const config = {
   matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
