@@ -20,7 +20,7 @@ export const sidebarLinks = [
         label : 'Recording'    
     },
     {
-        imgUrl:'/icons/add-personal-room.svg',
+        imgUrl:'/icons/add-personal.svg',
         route : '/personal-room',
         label : 'Personal Room'    
     },
